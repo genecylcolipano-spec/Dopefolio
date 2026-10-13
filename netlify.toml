@@ -1,0 +1,7 @@
+[build]
+  base = "."
+  publish = "."
+  command = ""
+
+[build.environment]
+  NPM_FLAGS = "--omit=dev"
