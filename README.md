@@ -72,6 +72,18 @@
 
 ## How To Use 🔧
 
+### Deploy on Netlify
+
+The root-level `netlify.toml` configures both the base and publish directories
+as the repository root. The HTML pages, `css/style.css`, JavaScript, and assets
+are already deploy-ready, so no build command is needed. This configuration
+overrides the site's dashboard build settings, including an incorrect base
+directory or `npm run dev` (which is not defined in this project).
+
+Netlify omits development dependencies during installation because deployment
+uses the checked-in CSS rather than the legacy Sass tooling. After changing
+Sass locally, regenerate and commit `css/style.css` before deploying.
+
 From your command line, first clone Dopefolio:
 
 ```bash
@@ -789,4 +801,3 @@ Special thanks to [Jacobo Martínez](https://github.com/cobidev) for inspiring m
 ## License 📄
 
 This project is licensed under the  **GPL-3.0** License - see the [LICENSE](LICENSE) file for details
-
